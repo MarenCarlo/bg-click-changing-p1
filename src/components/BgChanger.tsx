@@ -12,11 +12,7 @@ export const BgChanger = () => {
      * color: es el contenedor de los nombres de nuestros colores, necesarios para guardarlos en el estado bgcolor.
      */
     let color: colorsArray = ["IndianRed", "Pink", "LightSalmon", "OrangeRed", "Yellow", "SlateBlue", "LimeGreen", "Green", "Teal", "Maroon", "White"];
-    /**
-     * element: es el mismo array de los colores, pero utilizado para obtener el numero de estos, para que posteriormente
-     *          los operemos para obtener un color.
-     */
-    let [element] = useState<string[] | null>(["IndianRed", "Pink", "LightSalmon", "OrangeRed", "Yellow", "SlateBlue", "LimeGreen", "Green", "Teal", "Maroon", "White"]);
+    let colorCantity: number = 10;
     /**
      * bgcolor: aqui guardamos el color obtenido como un string.
      */
@@ -27,7 +23,7 @@ export const BgChanger = () => {
      * esta se realiza cada vez que se haga click en el boton.
      */
     const clickButton = () => {
-        coolor = color![Math.floor(Math.random() * element!.length)];
+        coolor = color![Math.floor(Math.random() * colorCantity)];
         setElement(
             bgcolor = coolor,
         )
